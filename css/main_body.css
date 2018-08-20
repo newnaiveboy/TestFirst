@@ -1,0 +1,135 @@
+@charset "utf-8";
+/*整体框架的relative定位，局部的absolute定位*/
+figure{
+    margin:0;
+    padding:0;
+}
+#center{
+    background:url(../imgs/big_im.jpg) no-repeat center;
+    width:100%;
+    height:800px;
+    min-width:1400px;
+    position:relative;
+
+}
+#search_area{
+    padding:0;
+    position:absolute;
+    width:600px;
+    height:80px;
+    /*top和left的技巧*/
+    top:50%;
+    left:50%;
+    /*外边距技巧*/
+    margin:-40px 0 0  -300px;
+    background-color:black;
+    opacity:0.5;
+    /*边角圆滑*/
+    border-radius:7px;
+}
+#center input{
+    position:absolute;
+    width:500px;
+    height:50px;
+    top:50%;
+    left:50%;
+    margin:-30px 0 0  -295px;
+    border-radius:7px;
+    font-size:24px;
+    font-family:华文新魏;
+    /*border:5px solid red;*/
+}
+#center button{
+    position:absolute;
+    width:70px;
+    height:55px;
+    top:50%;
+    left:50%;
+    margin:-30px 0 0  220px;
+    border-radius:7px;
+    color:#666;
+    font-weight:bold;
+    background-color:#eee;
+    /*border:5px solid red;*/
+}
+
+.scenery{
+    width:96%;
+    margin:0 auto;
+    /*min-width:1400px;*/
+    height:1900px;
+    /*text-align的优先级高于margin*/
+    text-align:center;
+}
+.scenery h2{
+    margin:7px 0;
+    color:#666;
+}
+.scenery p{
+    margin:7px 0 ;
+    line-height:1;
+    /*letter-spacing:2px;*/
+    text-indent:2em;
+    color:#666;
+}
+/*figure是一个块级元素*/
+.f1{
+    /*防止文字撑开整个figure*/
+    width:300px;
+    padding:4px;
+    border:1px solid #ddd;
+    display:inline-block;
+    text-align:left;
+    border-radius:4px;
+    margin:15px 12px;
+    position:relative;
+}
+/*很重要的一个技巧，在图片上使用vertical-align设置middle即可使图片居于figure正中间*/
+.f1 img{
+    /*border:1px solid red;*/
+    vertical-align:middle;
+}
+.f1 figcaption{
+
+    letter-spacing:1px;
+    line-height:1.5;
+    padding:7px 0 5px 0;
+    margin:5px 0;
+    color:#777;
+    font-size:14px;
+}
+.title{
+    letter-spacing:2px;
+    font-fimaly:楷体;;
+    font-size:24px;
+    font-style:normal;
+}
+.f1 div:first-child{
+    text-align:left;
+}
+.sat{
+    float:right;
+    font-size:14px;
+    /*使用relative后，再由top left等控制其距离*/
+    position:relative;
+    top:2px;
+    right:5px;
+}
+.price{
+    font-size:20px;
+    color:#f60;
+    letter-spacing:1px;
+}
+.toptitle{
+    background-color:#59b200;
+    font-size:18px;
+    width:80px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border-radius:3px;
+    position:absolute;
+    top:4px;
+    left:4px;
+    color:#fff;
+}
